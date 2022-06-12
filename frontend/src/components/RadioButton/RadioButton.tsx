@@ -10,6 +10,7 @@ export const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
   disabled,
   checked,
   labelText,
+  onChange
 }, ref) => {
   return (
     <label className="radioButton">
@@ -20,7 +21,8 @@ export const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
         name={name}
         defaultChecked={checked}
         type="radio"
-        ref={ref}/>
+        ref={ref}
+        onChange={onChange}/>
       <div className="radioButton__marker">
       </div>
       {

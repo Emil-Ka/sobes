@@ -225,6 +225,41 @@ html {
   .testItem__item:not(:last-child) {
     margin-bottom: 10px; }
 
+.darkSide {
+  display: none; }
+  .darkSide_active {
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.popup {
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 40px;
+  margin: auto auto; }
+  .popup__top {
+    display: flex;
+    justify-content: end; }
+  .popup__close {
+    cursor: pointer; }
+  .popup__desc {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center; }
+  .popup__img {
+    display: block;
+    margin: 30px auto; }
+
 .testsPage__title {
   font-weight: 500;
   font-size: 2.25rem;
@@ -287,4 +322,16 @@ html {
 .testPage__content {
   background: var(--body-color);
   padding: 100px 0; }
+
+.testPage__btn {
+  display: block;
+  padding: 16px 60px;
+  background: var(--blue-color);
+  text-align: center;
+  margin: 50px auto 0;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem; }
 

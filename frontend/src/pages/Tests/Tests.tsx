@@ -7,8 +7,8 @@ import {useTypedSelector} from '../../hooks';
 import {Header, Container, Footer, TestCover} from '../../components';
 
 export const Tests: FC = () => {
-  const {tests} = useTypedSelector(state => state.tests);
   const dispatch = useDispatch();
+  const {tests} = useSelector(state => state.tests);
   const API_URL = 'http://127.0.0.1:8000/api/test/';
 
   useEffect(() => {
@@ -26,6 +26,7 @@ export const Tests: FC = () => {
               tests.map((item, index) => (
                 <TestCover 
                   key={index}
+                  link={item.id}
                   title={item.test_name} 
                   count={item.content.questions.length} 
                   time={item.time} 
