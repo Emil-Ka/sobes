@@ -1,9 +1,16 @@
 import React, {FC} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import './app.scss';
+import {Home} from './pages';
+
+import './scss/index.scss';
 
 export const App: FC = () => {
   return (
-    <h1 className="title">hello</h1>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+    </Router>
   )
 };
