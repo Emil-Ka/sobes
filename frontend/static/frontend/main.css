@@ -1,6 +1,7 @@
 /*!*********************************************************************************************************************************************************!*\
   !*** css ./node_modules/import-glob-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
   \*********************************************************************************************************************************************************/
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -63,7 +64,15 @@ html {
   --blue-color: #006EBE;
   --dark-color: #000;
   --light-color: #fff;
-  --grey-color: #494949; }
+  --grey-color: #494949;
+  --body-color: #F7F9FB;
+  --sky-100: #1b1b1b;
+  --sky-90: #323232;
+  --sky-80: #494949;
+  --sky-70: #606060;
+  --sky-60: #767676;
+  --sky-50: #8d8d8d;
+  --sky-30: #bbbbbb; }
 
 .container {
   max-width: 1200px;
@@ -82,6 +91,156 @@ html {
     color: var(--blue-color); }
     .header__link:hover {
       text-decoration: underline; }
+
+.footer {
+  padding: 35px 0;
+  background: #e3e3e3; }
+  .footer__content {
+    display: flex;
+    justify-content: space-between; }
+  .footer__menu {
+    display: flex; }
+  .footer__list {
+    margin-left: 100px; }
+  .footer__item {
+    margin-bottom: 18px; }
+  .footer__link {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.32px; }
+    .footer__link:hover {
+      text-decoration: underline; }
+  .footer__copyright {
+    color: var(--grey-color);
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.87rem;
+    text-align: right; }
+  .footer__links div {
+    margin-bottom: 40px; }
+  .footer__links a {
+    display: inline-block;
+    margin-left: 20px; }
+
+.testCover {
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+  border-radius: 12px;
+  padding: 20px; }
+  .testCover__img {
+    width: 400px;
+    margin-bottom: 25px; }
+  .testCover__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-align: center;
+    margin-bottom: 40px; }
+  .testCover__count, .testCover__time, .testCover__level {
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+
+.radioButton {
+  display: flex;
+  align-items: center; }
+  .radioButton__input {
+    display: none; }
+    .radioButton__input:checked {
+      /*Стили для маркеров, когда input checked*/ }
+      .radioButton__input:checked + .radioButton__marker {
+        outline: 1px solid var(--blue-color);
+        border-radius: 50%;
+        position: relative; }
+        .radioButton__input:checked + .radioButton__marker:before {
+          content: '';
+          background: var(--blue-color);
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%; }
+    .radioButton__input:disabled ~ .radioButton__label {
+      /*Стиль для label, если у input disabled*/
+      color: var(--sky-30);
+      cursor: not-allowed; }
+  .radioButton__marker {
+    /*Стиль стандартного маркера*/
+    content: '';
+    display: inline-block;
+    cursor: pointer;
+    outline: 1px solid var(--sky-60);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px; }
+    .radioButton__marker_disabledOff {
+      /*Стиль маркера, если input disabled и он НЕ checked*/
+      outline: 1px solid var(--sky-50);
+      opacity: 0.5;
+      cursor: not-allowed; }
+    .radioButton__marker_disabledOn {
+      /*Стиль маркера, если input disabled и он checked*/
+      outline: 1px solid var(--blue-color);
+      border-radius: 50%;
+      opacity: 0.5;
+      position: relative;
+      cursor: not-allowed; }
+      .radioButton__marker_disabledOn:before {
+        content: '';
+        background: var(--blue-color);
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%; }
+  .radioButton__label {
+    /*Стиль ярлыка*/
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    cursor: pointer;
+    color: var(--sky-80);
+    transition: color .1s ease-in-out; }
+    .radioButton__label:hover {
+      color: var(--sky-100); }
+  .radioButton:hover {
+    /*Стили маркеров при наведении на весь блок radioButton*/ }
+    .radioButton:hover + .radioButton__marker {
+      /*Стили базового маркера, если он НЕ disabled и НЕ checked*/
+      outline: 1px solid var(--blue-color); }
+
+.testItem {
+  padding: 40px 70px;
+  background: #fff;
+  border-radius: 8px; }
+  .testItem__question {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px; }
+  .testItem__item:not(:last-child) {
+    margin-bottom: 10px; }
+
+.testsPage__title {
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  text-align: center;
+  margin-bottom: 100px; }
+
+.testsPage__content {
+  background: var(--body-color);
+  padding: 100px 0; }
+
+.testsPage__tests {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px; }
 
 .homePage {
   display: flex;
@@ -118,35 +277,14 @@ html {
     opacity: 1;
     top: 0; } }
 
-.footer {
-  padding: 35px 0;
-  background: #e3e3e3; }
-  .footer__content {
-    display: flex;
-    justify-content: space-between; }
-  .footer__menu {
-    display: flex; }
-  .footer__list {
-    margin-left: 100px; }
-  .footer__item {
-    margin-bottom: 18px; }
-  .footer__link {
-    color: var(--dark-color);
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    letter-spacing: -0.32px; }
-    .footer__link:hover {
-      text-decoration: underline; }
-  .footer__copyright {
-    color: var(--grey-color);
-    font-weight: 400;
-    font-size: 0.75rem;
-    line-height: 0.87rem;
-    text-align: right; }
-  .footer__links div {
-    margin-bottom: 40px; }
-  .footer__links a {
-    display: inline-block;
-    margin-left: 20px; }
+.testPage__title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  text-align: center;
+  margin-bottom: 80px; }
+
+.testPage__content {
+  background: var(--body-color);
+  padding: 100px 0; }
 

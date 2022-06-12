@@ -1,0 +1,21 @@
+.testsPage {
+  &__title {
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  &__content {
+    background: var(--body-color);
+    padding: 100px 0;
+  }
+
+  &__tests {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}

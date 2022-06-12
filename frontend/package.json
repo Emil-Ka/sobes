@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://127.0.0.1:8000",
   "scripts": {
     "dev": "npx webpack --mode development --watch",
     "build": "npx webpack --mode production --watch"
@@ -36,6 +37,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",
+    "classnames": "^2.3.1",
     "import-glob-loader": "^1.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

@@ -5,7 +5,7 @@ import {Header, Container, Footer} from '../../components';
 export const Home: FC = () => {
   return (
     <div className="homePage">
-      <Header/>
+      <Header link="Тесты" path="/tests"/>
       <div className="homePage__content">
         <Container>
           <h1 className="homePage__title">Собес - это новый сервис для прохождения собеседований</h1>
