@@ -131,8 +131,9 @@ html {
   border-radius: 12px;
   padding: 20px; }
   .testCover__img {
-    width: 400px;
-    margin-bottom: 25px; }
+    max-width: 400px;
+    margin-bottom: 25px;
+    border-radius: 12px; }
   .testCover__title {
     font-weight: 500;
     font-size: 1.5rem;
@@ -216,7 +217,8 @@ html {
 .testItem {
   padding: 40px 70px;
   background: #fff;
-  border-radius: 8px; }
+  border-radius: 8px;
+  margin-bottom: 20px; }
   .testItem__question {
     font-weight: 500;
     font-size: 20px;
@@ -228,7 +230,7 @@ html {
 .darkSide {
   display: none; }
   .darkSide_active {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -238,6 +240,8 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    .darkSide_active #root {
+      overflow: hidden; }
 
 .popup {
   max-width: 500px;

@@ -18,10 +18,10 @@ export const Test: FC = () => {
   const {id} = useParams();
   const [visiblePopup, setVisiblePopup] = useState<boolean>(false);
   const [result, setResult] = useState<number>(0);
+  const [answers, setAnswers] = useState<IAnswers>({});
 
   const API_URL = 'http://127.0.0.1:8000/api/test/';
   const test = tests.filter(item => item.id.toString() === id)[0];
-  const answers: IAnswers = {};
   const countQuestions = test.content.questions.length;
 
   useEffect(() => {
@@ -29,20 +29,32 @@ export const Test: FC = () => {
   }, []);
 
   useEffect(() => {
+    setAnswers({});
     test.content.questions.map((item) => {
-      answers[item.question] = 0
+      setAnswers(prev => (
+        {...prev, [item.question]: 0}
+      ));
     });
   }, [tests]);
 
+  useEffect(() => {
+    calcResult();
+  }, [answers]);
+
   const changeAnswer = (key: string, value: string) => {
     if (value === 'true') {
-      answers[key] = 1;
+      setAnswers(prev => (
+        {...prev, [key]: 1}
+      ));
     } else {
-      answers[key] = 0;
+      setAnswers(prev => (
+        {...prev, [key]: 0}
+      ));
     }
   };
 
-  const calcResult = (): number => {
+  const calcResult = () => {
+    setResult(0);
     Object.keys(answers).map((key) => {
       setResult(prev => prev += answers[key]);
     });
@@ -56,7 +68,7 @@ export const Test: FC = () => {
   return (
     <>
       <div className="testPage">
-        <Header link="Все тесты" path="/"/>
+        <Header link="Все тесты" path="/tests"/>
         <div className="testPage__content">
           <Container>
             <h1 className="testPage__title">Тест "{test.test_name}"</h1>

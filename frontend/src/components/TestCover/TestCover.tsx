@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import cover from '../../../assets/react-cover.jpg';
+import reactCover from '../../../assets/react-cover.jpg';
+import tsCover from '../../../assets/ts-cover.jpg';
 
 interface TestCoverProps {
   title: string;
@@ -20,8 +21,8 @@ export const TestCover: FC<TestCoverProps> = ({title, count, level, time, link})
     <div className="testCover">
       {
         title === TitleConstants.REACT_JUNIOR ? 
-        <img className="testCover__img" src={cover} alt="cover" /> : 
-        null
+        <img className="testCover__img" src={reactCover} alt="cover" /> : 
+        <img className="testCover__img" src={tsCover} alt="cover" />
       }
       <NavLink to={`/tests/${link}`}>
         <h2 className="testCover__title">{title}</h2>
