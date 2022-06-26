@@ -1,0 +1,45 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    flex: 1 0 auto;
+  }
+
+  &__title {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 3.25rem;
+    line-height: 3.75rem;
+    text-align: center;
+    max-width: 770px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  &__promo {
+    background: linear-gradient(90deg, #0275B1 0%, #00A2B8 100%);
+    border-radius: 32px;
+    padding: 36px;
+
+    p {
+      color: var(--light-color);
+      position: relative;
+      font-weight: 500;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      animation: hiddenToVisible 2s ease-in-out;
+    }
+  }
+}
+
+@keyframes hiddenToVisible {
+  from {
+    opacity: 0;
+    top: 100px;
+  } to {
+    opacity: 1;
+    top: 0;
+  }
+}

@@ -1,0 +1,341 @@
+/*!*********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/import-glob-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \*********************************************************************************************************************************************************/
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+html {
+  font-family: 'Rubik'; }
+
+#root {
+  height: 100%; }
+
+:root {
+  --blue-color: #006EBE;
+  --dark-color: #000;
+  --light-color: #fff;
+  --grey-color: #494949;
+  --body-color: #F7F9FB;
+  --sky-100: #1b1b1b;
+  --sky-90: #323232;
+  --sky-80: #494949;
+  --sky-70: #606060;
+  --sky-60: #767676;
+  --sky-50: #8d8d8d;
+  --sky-30: #bbbbbb; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.header {
+  padding: 25px 0; }
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header__link {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--blue-color); }
+    .header__link:hover {
+      text-decoration: underline; }
+
+.footer {
+  padding: 35px 0;
+  background: #e3e3e3; }
+  .footer__content {
+    display: flex;
+    justify-content: space-between; }
+  .footer__menu {
+    display: flex; }
+  .footer__list {
+    margin-left: 100px; }
+  .footer__item {
+    margin-bottom: 18px; }
+  .footer__link {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.32px; }
+    .footer__link:hover {
+      text-decoration: underline; }
+  .footer__copyright {
+    color: var(--grey-color);
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.87rem;
+    text-align: right; }
+  .footer__links div {
+    margin-bottom: 40px; }
+  .footer__links a {
+    display: inline-block;
+    margin-left: 20px; }
+
+.testCover {
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+  border-radius: 12px;
+  padding: 20px; }
+  .testCover__img {
+    max-width: 400px;
+    margin-bottom: 25px;
+    border-radius: 12px; }
+  .testCover__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-align: center;
+    margin-bottom: 40px; }
+  .testCover__count, .testCover__time, .testCover__level {
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+
+.radioButton {
+  display: flex;
+  align-items: center; }
+  .radioButton__input {
+    display: none; }
+    .radioButton__input:checked {
+      /*Стили для маркеров, когда input checked*/ }
+      .radioButton__input:checked + .radioButton__marker {
+        outline: 1px solid var(--blue-color);
+        border-radius: 50%;
+        position: relative; }
+        .radioButton__input:checked + .radioButton__marker:before {
+          content: '';
+          background: var(--blue-color);
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%; }
+    .radioButton__input:disabled ~ .radioButton__label {
+      /*Стиль для label, если у input disabled*/
+      color: var(--sky-30);
+      cursor: not-allowed; }
+  .radioButton__marker {
+    /*Стиль стандартного маркера*/
+    content: '';
+    display: inline-block;
+    cursor: pointer;
+    outline: 1px solid var(--sky-60);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px; }
+    .radioButton__marker_disabledOff {
+      /*Стиль маркера, если input disabled и он НЕ checked*/
+      outline: 1px solid var(--sky-50);
+      opacity: 0.5;
+      cursor: not-allowed; }
+    .radioButton__marker_disabledOn {
+      /*Стиль маркера, если input disabled и он checked*/
+      outline: 1px solid var(--blue-color);
+      border-radius: 50%;
+      opacity: 0.5;
+      position: relative;
+      cursor: not-allowed; }
+      .radioButton__marker_disabledOn:before {
+        content: '';
+        background: var(--blue-color);
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%; }
+  .radioButton__label {
+    /*Стиль ярлыка*/
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    cursor: pointer;
+    color: var(--sky-80);
+    transition: color .1s ease-in-out; }
+    .radioButton__label:hover {
+      color: var(--sky-100); }
+  .radioButton:hover {
+    /*Стили маркеров при наведении на весь блок radioButton*/ }
+    .radioButton:hover + .radioButton__marker {
+      /*Стили базового маркера, если он НЕ disabled и НЕ checked*/
+      outline: 1px solid var(--blue-color); }
+
+.testItem {
+  padding: 40px 70px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px; }
+  .testItem__question {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px; }
+  .testItem__item:not(:last-child) {
+    margin-bottom: 10px; }
+
+.darkSide {
+  display: none; }
+  .darkSide_active {
+    position: fixed;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .darkSide_active #root {
+      overflow: hidden; }
+
+.popup {
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 40px;
+  margin: auto auto; }
+  .popup__top {
+    display: flex;
+    justify-content: end; }
+  .popup__close {
+    cursor: pointer; }
+  .popup__desc {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center; }
+  .popup__img {
+    display: block;
+    margin: 30px auto; }
+
+.testsPage__title {
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  text-align: center;
+  margin-bottom: 100px; }
+
+.testsPage__content {
+  background: var(--body-color);
+  padding: 100px 0; }
+
+.testsPage__tests {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px; }
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .homePage__content {
+    flex: 1 0 auto; }
+  .homePage__title {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 3.25rem;
+    line-height: 3.75rem;
+    text-align: center;
+    max-width: 770px;
+    margin: 0 auto;
+    margin-bottom: 100px; }
+  .homePage__promo {
+    background: linear-gradient(90deg, #0275B1 0%, #00A2B8 100%);
+    border-radius: 32px;
+    padding: 36px; }
+    .homePage__promo p {
+      color: var(--light-color);
+      position: relative;
+      font-weight: 500;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      animation: hiddenToVisible 2s ease-in-out; }
+
+@keyframes hiddenToVisible {
+  from {
+    opacity: 0;
+    top: 100px; }
+  to {
+    opacity: 1;
+    top: 0; } }
+
+.testPage__title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  text-align: center;
+  margin-bottom: 80px; }
+
+.testPage__content {
+  background: var(--body-color);
+  padding: 100px 0; }
+
+.testPage__btn {
+  display: block;
+  padding: 16px 60px;
+  background: var(--blue-color);
+  text-align: center;
+  margin: 50px auto 0;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem; }
+

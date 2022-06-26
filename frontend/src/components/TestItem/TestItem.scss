@@ -1,0 +1,19 @@
+.testItem {
+  padding: 40px 70px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  &__question {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

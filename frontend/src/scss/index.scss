@@ -1,0 +1,15 @@
+@import './utils/reset.scss';
+@import './utils/base.scss';
+@import './utils/vars.scss';
+
+@import '../components/Container/Container.scss';
+@import '../components/Header/Header.scss';
+@import '../components/Footer/Footer.scss';
+@import '../components/TestCover/TestCover.scss';
+@import '../components/RadioButton/RadioButton.scss';
+@import '../components/TestItem/TestItem.scss';
+@import '../components/Popup/Popup.scss';
+
+@import '../pages/Tests/Tests.scss';
+@import '../pages/Home/Home.scss';
+@import '../pages/Test/Test.scss';
