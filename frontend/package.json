@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "proxy": "http://karaev-sobes.std-1830.ist.mospolytech.ru/",
+  "proxy": "http://sobes.std-1830.ist.mospolytech.ru/",
   "scripts": {
     "dev": "npx webpack --mode development --watch",
     "build": "npx webpack --mode production --watch"
