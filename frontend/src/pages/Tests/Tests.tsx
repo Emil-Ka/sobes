@@ -9,7 +9,7 @@ import {Header, Container, Footer, TestCover} from '../../components';
 export const Tests: FC = () => {
   const dispatch = useDispatch();
   const {tests} = useSelector(state => state.tests);
-  const API_URL = 'http://127.0.0.1:8000/api/test/';
+  const API_URL = '/api/test/';
 
   useEffect(() => {
     dispatch<any>(fetchTests(API_URL));

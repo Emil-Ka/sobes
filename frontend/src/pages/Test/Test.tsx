@@ -20,7 +20,7 @@ export const Test: FC = () => {
   const [result, setResult] = useState<number>(0);
   const [answers, setAnswers] = useState<IAnswers>({});
 
-  const API_URL = 'http://127.0.0.1:8000/api/test/';
+  const API_URL = '/api/test/';
   const test = tests.filter(item => item.id.toString() === id)[0];
   const countQuestions = test.content.questions.length;
 
