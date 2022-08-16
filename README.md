@@ -2,7 +2,7 @@
 
 http://sobes.std-1830.ist.mospolytech.ru/ - ссылка на проект
 ## Используемые технологии
-Python, Django, Django Rest Framework, React, TypeScript, Redux Toolkit, SASS, Webpack
+Python, Django, Django Rest Framework, React, TypeScript, Redux Toolkit, Axios, SASS, Webpack
 
 ## Описание проекта
 * Собес - это сервис, где вы можете проверить свои знания по интересующим вас технологиям
